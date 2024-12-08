@@ -1,0 +1,99 @@
+/* Global style */
+*::before, *::after, *:hover, *:focus {
+    box-sizing: border-box;
+}
+
+/* customize root style */
+:root {
+    --bs-border-style : dotted;
+    --bs-border-color : #000;
+    --bs-body-color: #212529;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #f7ecde;
+    font-family: "PT Sans Caption", sans-serif;
+
+}
+
+h1 {
+    font-size: 50px;
+    font-family: "Pacifico", cursive;
+    color: #352e28;
+    font-weight: 500;
+    position: relative;
+}
+
+/* Background shadow for h1 */
+h1::before {
+    content: "";
+    height: 30%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 0px;
+    position: absolute;
+    background-color: #fec260;
+    z-index: -1;
+    transition: height 1s;
+}
+
+/* Background hover for height */
+h1:hover::before{
+    height: 70%;
+}
+
+h2 {
+    font-family: "Righteous", cursive;
+    font-size: 25px;
+    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    background-clip: text;
+    color: transparent;
+    
+}
+
+/* make all items with the same width for alignment */
+label i {
+    width: 28px;
+}
+
+/* customize form style */
+.form-control {
+    border-color: #ced4da ; 
+}
+
+/* customize buttons style */
+.btn-Submit {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #d1512d;
+    --bs-btn-border-color: #d1512d;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #bb4120;
+    --bs-btn-hover-border-color: #a03315;
+    --bs-btn-focus-shadow-rgb: 187, 65, 32;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #bb4120;
+    --bs-btn-active-border-color: #a03315;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #bb4120;
+    --bs-btn-disabled-border-color: #a03315;
+}
+
+.btn-Visit {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #9eb23b;
+    --bs-btn-border-color: #9eb23b;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: rgb(138, 158, 35);
+    --bs-btn-hover-border-color: #6e8018;
+    --bs-btn-focus-shadow-rgb: 138, 158, 35;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #8a9e23;
+    --bs-btn-active-border-color: #6e8018;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #8a9e23;
+    --bs-btn-disabled-border-color: #6e8018;
+}

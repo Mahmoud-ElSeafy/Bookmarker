@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  
+  <header class="p-5 ">
+    <div class="container d-flex align-items-center align-content-center justify-content-center">
+      <h1 class="text-center">Bookmarker</h1>
+    </div>
+  </header>
+
+  <main class="container py-4 px-3 border border-2 border-start-0 border-end-0">
+
+      <h2 class="text-center mb-4">
+        <i class="fa-solid fa-bookmark"></i>
+        Bookmark your favorite sites
+        <i class="fa-solid fa-bookmark"></i>
+      </h2>
+
+      <form class="row g-3">
+        <div class="col-12">
+          <label for="validationSiteName" class="form-label fw-semibold">
+            <i class="fa-solid fa-book-bookmark pe-2"></i>
+            Site Name
+          </label>
+          <input type="text" oninput="validateSiteInfo(this)" class="form-control" id="validationSiteName" placeholder="Bookmark Name">
+          <div class="invalid-feedback ">
+            <small>Please enter a valid Bookmark Name (First character is capital letter, at least 5 character length, Not include special characters)</small>
+          </div>
+        </div>
+        <div class="col-12">
+          <label for="validationSiteURL" class="form-label fw-semibold">
+            <i class="fa-solid fa-link pe-2"></i>
+            Site URL
+          </label>
+          <input type="text" oninput="validateSiteInfo(this)" class="form-control" id="validationSiteURL" placeholder="Website URL">
+          <div class="invalid-feedback">
+            <small>Please enter a valid URL (starts with http:// or https:// , then a continue with valid URL)</small>
+          </div>
+        </div>
+        <div class="col-12 text-center">
+          <button id="submitBtn" class="btn btn-Submit px-5 disabled" type="button">Submit</button>
+        </div>
+      </form>   
+
+  </main>
+
+  <section>
+    <div class="container py-4">
+      
+      <table class="table table-light text-center">
+        <thead>
+          <tr>
+            <th scope="col">Index</th>
+            <th scope="col">Website Name</th>
+            <th scope="col">Visit</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody id="bookmarkRow">
+          
+          
+        </tbody>
+      </table>
+    </div>
+  </section>
+ 
+    <script src="./js/main.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
